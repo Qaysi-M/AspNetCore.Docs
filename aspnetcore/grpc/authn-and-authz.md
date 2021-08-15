@@ -44,6 +44,7 @@ The authentication mechanism your app uses during a call needs to be configured.
 Once authentication has been setup, the user can be accessed in a gRPC service methods via the `ServerCallContext`.
 
 ```csharp
+using Grpc.Core; //This is needed to access GetHttpContext()
 public override Task<BuyTicketsResponse> BuyTickets(
     BuyTicketsRequest request, ServerCallContext context)
 {
